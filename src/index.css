@@ -1,0 +1,220 @@
+:root {
+  font-family: Montserrat, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* color-scheme: light dark; */
+  /* color: rgba(255, 255, 255, 0.87); */
+  /* background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+
+  --neutralWhite : #D9D9D9;
+  /* --neutralWhite : #ededed; */
+  --fullWhite : #ffff;
+  --neutralDark : #3A3A3A;
+  --fullDark : #2D2D2D;
+
+  --accentRed : #DE3343;
+  --accentGreen : #72B356;
+
+  --borderRadius : 15px;
+
+
+
+}
+
+body {
+  margin: 0;
+  background-color: var(--neutralWhite);
+}
+
+
+
+
+/* big size */
+
+.logoCompBig {
+  display: flex;
+}
+
+.logoCompSvgBig {
+  aspect-ratio: 1/1;
+  width: 120px;
+}
+
+.logoCompBig .logoTextSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 12px;
+}
+
+.logoCompBig .logoTextSection h2 {
+  margin: 0px;
+  font-size: 72px;
+}
+
+.logoCompBig .logoTextSection p {
+  margin: 0px;
+  position: relative;
+  top: -15px;
+  font-size: 20px
+}
+
+
+
+
+
+/* medium size */
+
+.logoCompMedium {
+  display: flex;
+}
+
+.logoCompSvgMedium {
+  aspect-ratio: 1/1;
+  width: 80px;
+}
+
+.logoCompMedium .logoTextSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 12px;
+}
+
+.logoCompMedium .logoTextSection h2 {
+  margin: 0px;
+  font-size: 48px;
+}
+
+.logoCompMedium .logoTextSection p {
+  margin: 0px;
+  position: relative;
+  top: -8px;
+  font-size: 20px
+}
+
+
+
+
+/* small size */
+
+.logoCompSmall {
+  display: flex;
+}
+
+.logoCompSvgSmall {
+  aspect-ratio: 1/1;
+  width: 40px;
+}
+
+.logoCompSmall .logoTextSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 12px;
+}
+
+.logoCompSmall .logoTextSection h2 {
+  margin: 0px;
+  font-size: 24px;
+}
+
+.logoCompSmall .logoTextSection p {
+  margin: 0px;
+  position: relative;
+  top: -2px;
+  font-size: 10px
+}
+
+.logoTextSection.light h2 {
+  color: white;
+  font-size: 38px;
+}
+
+.logoTextSection.light p {
+  color: white;
+  font-size: 16px;
+  display: none;
+}
+
+.logoCompSvgMedium.lightSvg {
+  aspect-ratio: 1/1;
+  width: 60px;
+}
+
+.sideMenuLogo {
+  margin: 25px 0px;
+}
+
+
+
+a {
+  text-decoration: none;
+}
+
+
+.popup {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupBody {
+  width: 700px;
+  height: 600px;
+  background-color: var(--neutralWhite);
+  border-radius: var(--borderRadius);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.bodyInput input {
+  width: 90%;
+  font-size: 24px;
+  padding: 10px;
+  border: none;
+  border-radius: var(--borderRadius);
+  background-color: var(--neutralWhite);
+  margin: 0px 10px;
+}
+
+.popupHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--accentRed);
+
+}
+
+.innerBody {
+  /* background-color: red; */
+  flex-grow: 1;
+}
+
+.popupHeader h3 {
+  color: white;
+  margin: 10px;
+}
+
+.popupHeader p {
+  color: white;
+  margin: 10px 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  transform: scale(1.5);
+}
