@@ -175,15 +175,22 @@ a {
 
 .popupBody {
   width: 700px;
-  height: 600px;
+  height: 700px;
   background-color: var(--neutralWhite);
   border-radius: var(--borderRadius);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: scroll;
+  position: relative;
 }
 
-.bodyInput input {
+.popupBody::-webkit-scrollbar {
+  width: 00px;
+}
+
+
+
+/* .bodyInput input {
   width: 90%;
   font-size: 24px;
   padding: 10px;
@@ -191,19 +198,123 @@ a {
   border-radius: var(--borderRadius);
   background-color: var(--neutralWhite);
   margin: 0px 10px;
+} */
+
+
+.commentElement {
+  display: flex;
+  margin: 10px 0px;
+  border-bottom: 1px solid var(--fullWhite);
 }
 
-.popupHeader {
+/* .commentElement:first-child {
+  background-color: red;
+} */
+
+.commentElement .pfpSide img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0px 10px 0px 20px;
+  background-color: var(--neutralDark);
+}
+
+.commentElement .textSide {
+  flex-grow: 1;
+}
+
+.commentElement .textSide .usernameText {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.commentElement .textSide .usernameText p {
+  margin: 0px 0px 0px 10px;
+}
+
+.commentElement .textSide .usernameText img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--neutralDark);
+  cursor: pointer;
+}
+
+.commentElement .textSide .messageText p {
+  /* margin: 5px 5px 10px 5px;
+  padding: 5px 10px; */
+  width: fit-content;
+  margin: 5px 5px 10px 5px;
+}
+
+.voteSection {
+  border-radius: var(--borderRadius);
+  background-color: var(--fullWhite);
+  margin: 5px 5px 10px 5px;
+  padding: 5px 10px;
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+}
+
+.voteSection p {
+  margin: 0px;
+}
+
+.voteSection img {
+  cursor: pointer;
+}
+
+
+
+
+.popupInput {
+  background-color: var(--fullWhite);
+  position: sticky;
+  bottom: 0px;
+  display: flex;
+}
+
+.popupInput input {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  padding: 8px 10px;
+  border-radius: var(--borderRadius);
+  margin: 5px;
   width: 100%;
+}
+
+.popupInput button {
+  background-color: transparent;
+  border: 2px solid var(--neutralDark);
+  border-radius: var(--borderRadius);
+  margin: 5px;
+  color: var(--neutralDark);
+  font-weight: 800;
+  cursor: pointer;
+  padding: 5px 15px;
+}
+
+.allComments {
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+.popupHeader {
+  width: 700px;
   display: flex;
   justify-content: space-between;
   background-color: var(--accentRed);
-
-}
-
-.innerBody {
-  /* background-color: red; */
-  flex-grow: 1;
+  position: fixed;
+  border-radius: var(--borderRadius) var(--borderRadius) 0px 0px;
 }
 
 .popupHeader h3 {
@@ -218,3 +329,12 @@ a {
   border-radius: 50%;
   transform: scale(1.5);
 }
+
+
+
+
+
+
+
+
+

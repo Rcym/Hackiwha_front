@@ -26,6 +26,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </Route>
         <Route exact path="/explore" element={<HomePage currentPage={'explore'}/>}>
         </Route>
+        <Route exact path="/accepter" element={<HomePage currentPage={'accepter'}/>}>
+        </Route>
       </Routes>
     </React.StrictMode>
   </BrowserRouter>

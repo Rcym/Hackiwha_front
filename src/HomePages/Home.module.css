@@ -522,3 +522,56 @@
     border-radius: var(--borderRadius) var(--borderRadius) 0px 0px;
 } */
 
+
+
+
+.AccepterPage {
+    width: 1000px;
+    height: 200px;
+}
+
+.docContainer {
+    background-color: var(--fullWhite);
+    margin: 50px 0px;
+    border-radius: var(--borderRadius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.docElement {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid var(--neutralWhite);
+}
+
+.docElement .pfpFirst {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--neutralDark);
+    margin: 10px;
+}
+
+.docElement button {
+    border: none;
+    background-color: transparent;
+    padding: 5px 15px;
+    border-radius: var(--borderRadius);
+    margin: 8px 0px;
+}
+
+.docElement .dlBtn {
+    border: 1px solid var(--neutralDark);
+}
+
+.docElement .yesBtn {
+    background-color: var(--accentGreen);
+    color: white;
+}
+
+.docElement .noBtn {
+    background-color: var(--accentRed);
+    color: white;
+}

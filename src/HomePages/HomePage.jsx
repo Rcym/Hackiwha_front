@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HomeStyles from './Home.module.css'
 import '../index.css'
 import searchIcon from '/Search.svg'
@@ -12,8 +12,13 @@ import profileIcon from '/profileIcon.svg'
 import homeIcon from '/homeIcon.svg'
 import gearIcon from '/gearIcon.svg'
 import Popup from '../components/Popup'
+import Accepter from './Accepter'
 
 const HomePage = ({currentPage}) => {
+
+    // let isPopupVisible = true
+
+    const [isCommenting, setIsCommenting] = useState(false)
 
 
   return (
@@ -44,6 +49,10 @@ const HomePage = ({currentPage}) => {
                 <a href='/profile' className={HomeStyles.sideMenuElement}>
                     <img src={profileIcon} alt="" />
                     <h3>Profile</h3>
+                </a>
+                <a href='/accepter' className={HomeStyles.sideMenuElement}>
+                    <img src={profileIcon} alt="" />
+                    <h3>Acceptation</h3>
                 </a>
 
             </div>
@@ -80,14 +89,20 @@ const HomePage = ({currentPage}) => {
                     <ProfilePage />
                 ): (currentPage == 'explore') ? (
                     <ExplorePage />
-                ) : (<></>) )
-                }
+                ) : (currentPage == 'accepter') ? (
+                    <Accepter />
+                ):( <></>)
+                )}
 
                 {/* <HomeFeed /> */}
                 {/* <ProfilePage /> */}
                 
                 
-                {/* <Popup title={'Comments'} /> */}
+                {
+                    isCommenting ? (
+                        <Popup setIsCommenting={setIsCommenting} title={'Comments'} />
+                    ) : (<></>)
+                }
 
                     
             </div>
