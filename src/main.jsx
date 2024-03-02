@@ -20,7 +20,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
         <Route exact path="/login" element={<LoginPage />}>
         </Route>
-        <Route exact path="/home" element={<HomePage currentPage={'home'}/>}>
+        <Route exact path="/" element={<HomePage currentPage={'home'}/>}>
         </Route>
         <Route exact path="/profile" element={<HomePage currentPage={'profile'}/>}>
         </Route>
