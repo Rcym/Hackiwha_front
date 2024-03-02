@@ -13,7 +13,14 @@ import homeIcon from '/homeIcon.svg'
 import gearIcon from '/gearIcon.svg'
 import Popup from '../components/Popup'
 import Accepter from './Accepter'
-
+import exitIcon from '/exitIcon.svg'
+import pfp1 from '/pfp1.png'
+import pfp2 from '/pfp2.png'
+import pfp3 from '/pfp3.png'
+  function getRandomPfp() {
+    const pfps = [pfp1, pfp2, pfp3]
+    return pfps[parseInt(Math.random() * pfps.length)];
+  }
 const HomePage = ({currentPage}) => {
 
     // let isPopupVisible = true
@@ -74,8 +81,9 @@ const HomePage = ({currentPage}) => {
                         <img src={searchIcon} alt="" />
                         <input type="text" placeholder='. . .' />
                     </div>
+                    {/* <button><img src={exitIcon} alt="" /></button> */}
                     <div className={HomeStyles.navBarProfile}>
-                        <img src="" alt="" />
+                        <img src={getRandomPfp()} alt="" />
                         <div className={HomeStyles.navbarProfileText}>
                             <h3>Username twil</h3>
                             <p>24 teffa7a</p>
@@ -84,7 +92,7 @@ const HomePage = ({currentPage}) => {
                 </div>
 
                 {currentPage == 'home'? (
-                    <HomeFeed />
+                    <HomeFeed setIsCommenting={setIsCommenting} />
                 ) : (currentPage == 'profile' ? (
                     <ProfilePage />
                 ): (currentPage == 'explore') ? (

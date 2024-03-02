@@ -6,32 +6,39 @@ import upvoteIcon from '/upvote_icon.svg'
 import commentIcon from '/comment_ic_icon.svg'
 
 
-const Post = () => {
 
+
+const Post = ({title, content, user, submedicPFP, nbVotes, nbComments,setIsCommenting}) => {
+
+    function handleUpvote() {
+
+    }
+
+    const [color, setColor] = useState('var(--fullWhite)')
 
   return (
     <div className={HomeStyles.postElement}>
         <div className={HomeStyles.postHeader}>
-            <img src="" alt="" />
+            <img src={submedicPFP} alt="" />
             <div className={HomeStyles.postHeaderText}>
-                <h3>The title of the post that is realy big bzaf</h3>
-                <p>t/mentalIlness</p>
+                <h3>{title}</h3>
+                <p>{user}</p>
             </div>
         </div>
 
         <div className={HomeStyles.postCore}>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus saepe odio nam soluta temporibus! Dolore, officia vitae? Ducimus vitae laudantium velit earum rerum aliquam aliquid minus, placeat dolore voluptatum quae?</p>
+            <p>{content}</p>
         </div>
 
         <div className={HomeStyles.postFooter}>
-            <div className={HomeStyles.postFooterElement}>
-                <img src={upvoteIcon} alt="" />
-                <p>69</p>
+            <div className={HomeStyles.postFooterElement} > 
+                <img src={upvoteIcon} alt="" onClick={handleUpvote} />
+                <p>{nbVotes}</p>
                 <img src={downvoteIcon} alt="" />
             </div>
-            <div className={HomeStyles.postFooterElement}>
+            <div className={HomeStyles.postFooterElement} onClick={() => setIsCommenting(true)}>
                 <img className={HomeStyles.commentIconFix} src={commentIcon} alt="" />
-                <p>69</p>
+                <p>{nbComments}</p>
             </div>
         </div>
 
